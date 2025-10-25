@@ -1,0 +1,3 @@
+1. I asked ChatGPT how to use LangChain loaders on uploaded files because the class example used a file path, which is unavailable in the assignment.
+2. I asked ChatGPT how to stream the assistant's responses with LangChain because the class only covered streaming with OpenAI SDK.
+3. I searched on Google for PDF file loader and found it on the LangChain website (https://python.langchain.com/docs/integrations/document_loaders/).
