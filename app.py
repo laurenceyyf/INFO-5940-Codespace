@@ -90,14 +90,8 @@ if question and uploaded_files:
 
     # Stream the assistant's response
     with st.chat_message("assistant"):
-        placeholder = st.empty()
-        acc = ""
-        for chunk in llm.stream(messages):
-            if chunk.content:
-                acc += chunk.content
-                placeholder.markdown(acc)
-
-    response = acc
+        stream = llm.stream(messages)
+        response = st.write_stream(stream)
 
     # Append the assistant's response to the messages
     st.session_state.messages.append({"role": "assistant", "content": response})
